@@ -8,22 +8,25 @@ as the key tools in the development of the system. The main technique emploted i
 which separate the speech into its source and system components without any a priori knowledge about source and / 
 or system (http://iitg.vlab.co.in/?sub=59&brch=164&sim=615&cnt=1)
 
-##How to Run
+## How to Run
 
-###1.) Matlab 
+### 1.) Matlab 
 The system starts by initially recording a continuous signal using MATLAB for a maximum of five seconds. 
 After recording, the signal is them saved to an excel file.
 The signal data, using a 8KHz sampling rate, frame size of 20ms, and frame step of 10ms, is framed. 
 The result is a signal that is divided into 498 frames, each consisting of 160 samples.
 
-###2.) Excel GUI
+### 2.) Excel GUI
+
 After framing, the each frame undergoes the following process: 
-####a) zero padding
-####b) Fast Fourier Transform
-####c) Power Spectrum
-####d) Log of Power Spectrum
-####e) Inverse Fast Fourier Transform, and 
-####f) High-Time Liftering, 
+
+#### a) zero padding
+#### b) Fast Fourier Transform
+#### c) Power Spectrum
+#### d) Log of Power Spectrum
+#### e) Inverse Fast Fourier Transform, and 
+#### f) High-Time Liftering, 
+
 which are essentially the processes in Cepstral Analysis.
 
 The zero padding is done on every frame to turn each frame into having 256 samples which is a base 2 number. (i.e. 〖log〗_2 256=8). This is important in the process of Fast Fourier Transform.
