@@ -29,7 +29,7 @@ After framing, the each frame undergoes the following process:
 
 which are essentially the processes in Cepstral Analysis.
 
-The zero padding is done on every frame to turn each frame into having 256 samples which is a base 2 number. (i.e. 〖log〗_2 256=8). This is important in the process of Fast Fourier Transform.
+The zero padding is done on every frame to turn each frame into having 256 samples which is a base 2 number. (i.e. log_2 256=8). This is important in the process of Fast Fourier Transform.
 
 Then these signals undergo Fast Fourier Transform, specifically a Radix-2 Decimation in Time Fast Fourier Transform. The output is then squared to get the power spectrum. The resulting square outputs are processed to get the logarithm of each. The log of the power spectrum then is processed in an Inverse Fast Fourier Transform. The results of the IFFT are the cepstral coefficients.
 The output cepstral coefficients are applied high-time liftering then mode is applied to the results to identify the gender of the speaker.
